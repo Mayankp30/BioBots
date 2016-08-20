@@ -17,7 +17,11 @@ bioApp.controller('bioController', ['$scope', '$http', function($scope, $http) {
 				columnChartValues1 = JSON.parse(data.ColumnChartValues1);
 				columnChartValues2 = JSON.parse(data.ColumnChartValues2);
 				columnChartValues3 = JSON.parse(data.ColumnChartValues3);
-				drawChart(columnChartValues, columnChartValues1, columnChartValues2, columnChartValues3);
+				columnChartValues4 = JSON.parse(data.ColumnChartValues4);
+				columnChartValues5 = JSON.parse(data.ColumnChartValues5);
+				columnChartValues6 = JSON.parse(data.ColumnChartValues6);
+
+				drawChart(columnChartValues, columnChartValues1, columnChartValues2, columnChartValues3, columnChartValues4, columnChartValues5, columnChartValues6);
 			}
 			//google.setOnLoadCallback(drawChart);
  	    })

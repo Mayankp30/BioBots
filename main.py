@@ -109,16 +109,16 @@ def output():
 	# Resolution Layer Height <less than 1 
 	
 	values4 = '[["Range", "Layer Height" ,{ "role": "annotation" } ],'
-	valueToAdd4 = values4 + '["' + "0-10" + '",' + `sum(0 <= x <= 10 for x in layerHeight)` + ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "11-20" + '",' + `sum(11 <= x <= 20 for x in layerHeight)` + ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "21-30" + '",' + `sum(21 <= x <= 30 for x in layerHeight)`  + ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "31-40" + '",' + `sum(31 <= x <= 40 for x in layerHeight)` + ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "41-50" + '",' + `sum(41 <= x <= 50 for x in layerHeight)` + ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "51-60" + '",' + `sum(51 <= x <= 60 for x in layerHeight)` +  ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "61-70" + '",' + `sum(61 <= x <= 70 for x in layerHeight)` +  ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "71-80" + '",' + `sum(71 <= x <= 80 for x in layerHeight)` + ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "81-90" + '",' + `sum(81 <= x <= 90 for x in layerHeight)`  + ', ""],'
-	valueToAdd4 = valueToAdd4 + '["' + "91-100" + '",' + `sum(91 <= x <= 100 for x in layerHeight)` + ', ""]]'
+	valueToAdd4 = values4 + '["' + "0.00-0.10" + '",' + `sum(0 <= x <= 0.1 for x in layerHeight)` + ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.11-0.20" + '",' + `sum(0.11 <= x <= 0.20 for x in layerHeight)` + ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.21-0.30" + '",' + `sum(0.21 <= x <= 0.30 for x in layerHeight)`  + ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.31-0.40" + '",' + `sum(0.31 <= x <= 0.40 for x in layerHeight)` + ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.41-0.50" + '",' + `sum(0.41 <= x <= 0.50 for x in layerHeight)` + ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.51-0.60" + '",' + `sum(0.51 <= x <= 0.60 for x in layerHeight)` +  ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.61-0.70" + '",' + `sum(0.61 <= x <= 0.70 for x in layerHeight)` +  ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.71-0.80" + '",' + `sum(0.71 <= x <= 0.80 for x in layerHeight)` + ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.81-0.90" + '",' + `sum(0.81 <= x <= 0.90 for x in layerHeight)`  + ', ""],'
+	valueToAdd4 = valueToAdd4 + '["' + "0.91-1.00" + '",' + `sum(0.91 <= x <= 1 for x in layerHeight)` + ', ""]]'
 
 
 	#Resolution Layer Num <less than 50
@@ -161,9 +161,21 @@ def output():
 	valueToAdd5=valueToAdd5 + '["' + "81-90" + '",' + `sum(81 <= x <= 90 for x in intensity)` + ', ""],'
 	valueToAdd5=valueToAdd5 + '["' + "91-100" + '",' + `sum(91 <= x <= 100 for x in intensity)` + ', ""]]'
 
+	values6= '[["Range", "Cl Duration", { "role": "annotation" } ],'
+	valueToAdd6=values6 + '["' + "0-3000" + '",' + `sum(0 <= x <= 3000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "3001-6000" + '",' + `sum(3001 <= x <= 6000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "6001-9000" + '",' + `sum(6001 <= x <= 9000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "9001-12000" + '",' + `sum(9001 <= x <= 12000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "12001-15000" + '",' + `sum(12001 <= x <= 15000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "15001-18000" + '",' + `sum(15001 <= x <= 18000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "18001-21000" + '",' + `sum(18001 <= x <= 21000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "21001-24000" + '",' + `sum(21001 <= x <= 24000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "24001-27000" + '",' + `sum(24001 <= x <= 27000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "27001-30000" + '",' + `sum(27001 <= x <= 30000 for x in duration)` + ', ""]]'
+
 
 	if(flag == 1):
-		return jsonify({'ColumnChartValues' : valueToAdd, 'ColumnChartValues1' : valueToAdd1, 'ColumnChartValues2' : valueToAdd2, 'ColumnChartValues3' : valueToAdd3, 'ColumnChartValues4': valueToAdd4, 'ColumnChartValues5': valueToAdd5})
+		return jsonify({'ColumnChartValues' : valueToAdd, 'ColumnChartValues1' : valueToAdd1, 'ColumnChartValues2' : valueToAdd2, 'ColumnChartValues3' : valueToAdd3, 'ColumnChartValues4': valueToAdd4, 'ColumnChartValues5': valueToAdd5, 'ColumnChartValues6': valueToAdd6})
 	else:
 		return jsonify({'ColumnChartValues' : "null"})
 	
