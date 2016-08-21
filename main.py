@@ -78,7 +78,7 @@ def output():
 	#print layerNum
 	#print wellplate
 
-	values = '[["Range", "Dead Percent" , "Live Percent", "Elasticity",{ "role": "annotation" } ],'
+	values = '[["Range", "Dead Percent" , "Live Percent", "Elasticity(in kPa)",{ "role": "annotation" } ],'
 	valueToAdd = values + '["' + "0-10" + '",' + `sum(0 <= x <= 10 for x in deadPercent)` + ',' + `sum(0 <= x <= 10 for x in livePercent)`+ ',' + `sum(0 <= x <= 10 for x in elastiCity)` + ', ""],'
 	valueToAdd = valueToAdd + '["' + "11-20" + '",' + `sum(11 <= x <= 20 for x in deadPercent)` + ',' + `sum(11 <= x <= 20 for x in livePercent)` + ',' + `sum(11 <= x <= 20 for x in elastiCity)` + ', ""],'
 	valueToAdd = valueToAdd + '["' + "21-30" + '",' + `sum(21 <= x <= 30 for x in deadPercent)` + ',' + `sum(21 <= x <= 30 for x in livePercent)` + ',' + `sum(21 <= x <= 30 for x in elastiCity)` + ', ""],'
@@ -148,8 +148,8 @@ def output():
 	valueToAdd3=valueToAdd3 + '["' + "81-90" + '",' + `sum(81 <= x <= 90 for x in wellplate)` + ', ""],'
 	valueToAdd3=valueToAdd3 + '["' + "91-100" + '",' + `sum(91 <= x <= 100 for x in wellplate)` + ', ""]]'
 
-
-	values5= '[["Range", "Cl Intensity", { "role": "annotation" } ],'
+	# cl intensity 
+	values5= '[["Range", "Cl intensity", { "role": "annotation" } ],'
 	valueToAdd5=values5 + '["' + "0-10" + '",' + `sum(0 <= x <= 10 for x in intensity)` + ', ""],'
 	valueToAdd5=valueToAdd5 + '["' + "11-20" + '",' + `sum(11 <= x <= 20 for x in intensity)` + ', ""],'
 	valueToAdd5=valueToAdd5 + '["' + "21-30" + '",' + `sum(21 <= x <= 30 for x in intensity)` + ', ""],'
@@ -161,17 +161,18 @@ def output():
 	valueToAdd5=valueToAdd5 + '["' + "81-90" + '",' + `sum(81 <= x <= 90 for x in intensity)` + ', ""],'
 	valueToAdd5=valueToAdd5 + '["' + "91-100" + '",' + `sum(91 <= x <= 100 for x in intensity)` + ', ""]]'
 
-	values6= '[["Range", "Cl Duration", { "role": "annotation" } ],'
-	valueToAdd6=values6 + '["' + "0-3000" + '",' + `sum(0 <= x <= 3000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "3001-6000" + '",' + `sum(3001 <= x <= 6000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "6001-9000" + '",' + `sum(6001 <= x <= 9000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "9001-12000" + '",' + `sum(9001 <= x <= 12000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "12001-15000" + '",' + `sum(12001 <= x <= 15000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "15001-18000" + '",' + `sum(15001 <= x <= 18000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "18001-21000" + '",' + `sum(18001 <= x <= 21000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "21001-24000" + '",' + `sum(21001 <= x <= 24000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "24001-27000" + '",' + `sum(24001 <= x <= 27000 for x in duration)` + ', ""],'
-	valueToAdd6=valueToAdd6 + '["' + "27001-30000" + '",' + `sum(27001 <= x <= 30000 for x in duration)` + ', ""]]'
+	# Cl duration
+	values6= '[["Range", "Cl duration", { "role": "annotation" } ],'
+	valueToAdd6=values6 + '["' + "0-3" + '",' + `sum(0 <= x <= 3000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "3.1-6" + '",' + `sum(3001 <= x <= 6000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "6.1-9" + '",' + `sum(6001 <= x <= 9000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "9.1-12" + '",' + `sum(9001 <= x <= 12000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "12.1-15" + '",' + `sum(12001 <= x <= 15000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "15.1-18" + '",' + `sum(15001 <= x <= 18000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "18.1-21" + '",' + `sum(18001 <= x <= 21000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "21.1-24" + '",' + `sum(21001 <= x <= 24000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "24.1-27" + '",' + `sum(24001 <= x <= 27000 for x in duration)` + ', ""],'
+	valueToAdd6=valueToAdd6 + '["' + "27.1-30" + '",' + `sum(27001 <= x <= 30000 for x in duration)` + ', ""]]'
 
 
 	if(flag == 1):

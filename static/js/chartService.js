@@ -15,7 +15,7 @@ function drawChart(columnChartValues, columnChartValues1, columnChartValues2, co
               legend: { position: 'in' , maxlines: 2},
               hAxis:{ title : 'Range'},
               vAxis:{ title : 'Values'},
-              bar: { groupWidth: '65%' },
+              bar: { groupWidth: '60%' },
               colors: ['#bcbddc', '#756bb1','#e0440e'],
               isStacked: false,
               };
@@ -34,7 +34,7 @@ function drawChart(columnChartValues, columnChartValues1, columnChartValues2, co
               };
 
    var optionsColumn2 = {
-              title: "Info - Resolution - Layer Number", 
+              title: "Info - Resolution - Layer number", 
               width: '100%',
               height: '100%',
               titleTextStyle:{fontSize: 18},
@@ -65,7 +65,7 @@ function drawChart(columnChartValues, columnChartValues1, columnChartValues2, co
               height: '100%',
               titleTextStyle:{fontSize: 18},
               legend: { position: 'in' , maxlines: 2},
-              hAxis:{ title : 'Range'},
+              hAxis:{ title : 'Range(in mm)'},
               vAxis:{ title : 'Values'},
               bar: { groupWidth: '65%' },
               colors: ['#009933'],
@@ -78,7 +78,7 @@ function drawChart(columnChartValues, columnChartValues1, columnChartValues2, co
               height: '100%',
               titleTextStyle:{fontSize: 18},
               legend: { position: 'in' , maxlines: 2},
-              hAxis:{ title : 'Range'},
+              hAxis:{ title : 'Range(in percent)'},
               vAxis:{ title : 'Values'},
               bar: { groupWidth: '65%' },
               colors: ['#ff0000'],
@@ -91,9 +91,9 @@ function drawChart(columnChartValues, columnChartValues1, columnChartValues2, co
               height: '100%',
               titleTextStyle:{fontSize: 18},
               legend: { position: 'in' , maxlines: 1},
-              hAxis:{ title : 'Range'},
+              hAxis:{ title : 'Range(in seconds)'},
               vAxis:{ title : 'Values'},
-              bar: { groupWidth: '65%' },
+              bar: { groupWidth: '25%' },
               colors: ['#ff6600'],
               isStacked: false,
               };

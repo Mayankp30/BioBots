@@ -5,7 +5,7 @@ bioApp.controller('bioController', ['$scope', '$http', function($scope, $http) {
 
 		//default values for hypothetical scenario
 		$scope.processForm = function() {
-			var email = $scope.email;
+			var email = $scope.formData.email;
 			var data = {"email" : email};
 			$http.post("/output", data)
 		  .success(function(data) { //data received in "~" separated values in the form of ["Column chart values"~"Pie chart values for Conventional material"~"Pie chart values for New material"~"Life Cycle Cost of conventional material"~"Life Cycle Cost of New material"]
